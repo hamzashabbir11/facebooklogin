@@ -68,7 +68,7 @@
         appId      : '1651546925376723',
         cookie     : true,
         xfbml      : true,
-        version    : 'v3.3'
+        version    : 'v19.0'
       });
         
       FB.AppEvents.logPageView();   
@@ -86,6 +86,8 @@
 
         function checkLoginState() {
         FB.getLoginStatus(function(response) {
+            // log the access token
+            console.log(response.authResponse.accessToken);
             statusChangeCallback(response);
         });
             }
